@@ -4,19 +4,26 @@
 (electric-pair-mode 1)
 (load-theme 'manoj-dark t)
 (setq x-select-enable-clipboard t)
-
-(require 'package)
-;; MELPAを追加
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
-;; MELPA-stableを追加
-(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
-;; Marmaladeを追加
-(add-to-list 'package-archives  '("marmalade" . "http://marmalade-repo.org/packages/") t)
-;; Orgを追加
-(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
-;; 初期化
-(package-initialize)
-
+(when (eq system-type 'darwin)
+  (setq ns-command-modifier (quote meta)))
+(setq backup-directory-alist '((".*"."~/.ehist")))
+(require 'package) ; パッケージ機能を有効にする
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t) ; MELPAリポジトリを追加する
+(package-initialize) ; インストールされているパッケージを初期化する
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages (quote (xclip web-mode auto-complete))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+(require 'auto-complete-config)
+(ac-config-default)
 ;########################################
 ; web-mode setting
 ;########################################
@@ -45,18 +52,7 @@
   (setq web-mode-tag-auto-close-style 2)
 )
 (add-hook 'web-mode-hook 'web-mode-hook)
+
+(require 'xclip)
+(xclip-mode 1)
   
-
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (web-mode railscasts-theme helm-themes darkroom))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
