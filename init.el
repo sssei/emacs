@@ -4,18 +4,34 @@
 (electric-pair-mode 1)
 (load-theme 'manoj-dark t)
 (setq x-select-enable-clipboard t)
+
 (when (eq system-type 'darwin)
   (setq ns-command-modifier (quote meta)))
+
 (setq backup-directory-alist '((".*"."~/.ehist")))
-(require 'package) ; パッケージ機能を有効にする
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t) ; MELPAリポジトリを追加する
-(package-initialize) ; インストールされているパッケージを初期化する
+
+;;; package.el
+(require 'package)
+;; MELPAを追加
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+;; MELPA-stableを追加
+(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/"))
+;; Marmaladeを追加
+(add-to-list 'package-archives  '("marmalade" . "https://marmalade-repo.org/packages/"))
+;; Orgを追加
+(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
+;; 初期化
+(package-initialize)
+
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (xclip web-mode auto-complete))))
+ '(package-selected-packages
+   (quote
+    (yatex list-packages-ext xclip web-mode auto-complete))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -24,35 +40,26 @@
  )
 (require 'auto-complete-config)
 (ac-config-default)
-;########################################
-; web-mode setting
-;########################################
-(require 'web-mode)
 
-(add-to-list 'auto-mode-alist '("\\.jsp$"       . web-mode))
-(add-to-list 'auto-mode-alist '("\\.html?$"     . web-mode))
+(global-set-key "\M-n" (lambda () (interactive) (scroll-up 1)))
+(global-set-key "\M-p" (lambda () (interactive) (scroll-down 1)))
+(global-set-key "\M-]" (lambda () (interactive) (scroll-up 1)))
+(global-set-key "\M-[" (lambda () (interactive) (scroll-down 1)))
 
-(defun web-mode-hook ()
-  "Hooks for Web mode."
-
-  ;; indent
-  (setq web-mode-html-offset   2)
-  (setq web-mode-style-padding 2)
-  (setq web-mode-css-offset    2)
-  (setq web-mode-script-offset 2)
-  (setq web-mode-java-offset   2)
-  (setq web-mode-asp-offset    2)
-
-  (local-set-key (kbd "C-m") 'newline-and-indent)
-  
-  ;; auto tag closing
-  ;0=no auto-closing
-  ;1=auto-close with </
-  ;2=auto-close with > and </
-  (setq web-mode-tag-auto-close-style 2)
-)
-(add-hook 'web-mode-hook 'web-mode-hook)
+(setq scroll-conservatively 1)
 
 (require 'xclip)
 (xclip-mode 1)
   
+(put 'upcase-region 'disabled nil)
+
+(set-face-attribute 'default nil
+                      :family "Monaco"
+                      :height 130)
+(set-fontset-font "fontset-default"
+		  'japanese-jisx0208
+		  '("Hiragino Maru Gothic ProN"))
+(set-fontset-font "fontset-default"
+		  'katakana-jisx0201
+		  '("Hiragino Maru Gothic ProN"))
+(show-paren-mode t)

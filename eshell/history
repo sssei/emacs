@@ -1,8 +1,128 @@
+cd Project/AOJ
+codesign -s gdb-cert /usr/local/bin/gdb
+which gdb
+which gdb-mi.el
+gdb
+codesign -vv `which gdb`
+ps aux | grep taskgated
+sudo kill 4256
+gdb
+gdb ./a.out
+sudo pkill -KILL taskgated
+gdb ./a.out
+codesign --entitlements gdb.xml -fs gdb-cert /usr/local/bin/gdb
+gdb ./a.out
+ls
+g++ -g test.cpp 
+g++ -g test.cpp 
+ls
+ls
+g++ -g 7A.cpp 
+ls
+cd a.out.dSYM/
+ls
+cd Contents/
+ls
+cd 
+cd Project/
+cd AOJ/
+ls
+g++ -g 2D.cpp 
+g++ -g -O0 1A.cpp
+ls
+g++ -g test.cpp 
+cd /usr/local/share
+ls
+cd emacs 
+ls
+cd site-lisp/
+ls
+cd autoconf/
+ls
+cd ..
+cd ..
+s
+ls
+cd 
+cd Project/
+cd ..
+cd .emacs.d/
+ls
+mkdir conf public_repos elisp
 ls
 cd ..
 ls
-cd AOJ/
+cd HTML/
+ls
+git init
+git remote add origin https://github.com/sssei/HTML.git
+git add .
+git commit -m"new file"
+git push origin master 
+ls
+ls -l
+ls -la
+gnuplot
+ls
+cd ..
+ls
+ls
+ls
+pwd 
+pwd
+cd HTML/
+ls
+cd HTML/
+cd
+jupyter notebook
+cd ..
+ls
+cd JavaScript/
+ls
+git init
+git add .
+git commit -m"new file"
+git remote add origin master https://github.com/sssei/JavaScript.git
+git remote add origin https://github.com/sssei/JavaScript.git
+git push origin master 
+ls
+open hello_ex.html 
+open hello_ex.html 
+ls
+cd
+cd ..
+ls
+cd ..
+ls
+cd System/
+ls
+cd ..
+ls
+sudo du -sh /*
+jupyter notebook
+git add .
+git commit -m"new file"
+git push origin master 
+ls
+cd
+cd Project/JavaScript/
 ls
 git add .
 git commit -m"new file"
-git push AOJ master
+git push origin master 
+ls | grep html
+ls
+cat 
+cat hello_ex.js
+cat hello_ex.js | grep let
+ls
+emacs -nw 
+ls
+dest.js  hello.html  hello_ex.css  hello_ex.html  hello_ex.js  label_no.js  try.js
+cd ..
+ls
+python 
+ls
+cd ..
+ls
+ls
