@@ -24,20 +24,20 @@
 (package-initialize)
 
 
-(custom-set-variables
+;;(custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   (quote
-    (yatex list-packages-ext xclip web-mode auto-complete))))
-(custom-set-faces
+;; '(package-selected-packages
+;;   (quote
+;;    (yatex list-packages-ext xclip web-mode auto-complete))))
+;;(custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+;; )
 (require 'auto-complete-config)
 (ac-config-default)
 
@@ -63,3 +63,27 @@
 		  'katakana-jisx0201
 		  '("Hiragino Maru Gothic ProN"))
 (show-paren-mode t)
+
+(add-hook 'find-file-hooks 'auto-insert)
+(setq auto-insert-directory "~/.emacs.d/")
+(setq auto-insert-alist
+      (append '(
+                ("\\.cpp" . "templete.cpp")
+               )))
+(add-to-list 'display-buffer-alist
+     '("^\\*shell\\*$" . (display-buffer-same-window)))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (yatex xclip web-mode list-packages-ext auto-complete))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+
