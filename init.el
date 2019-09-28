@@ -44,7 +44,16 @@
 (setq auto-insert-alist
       (append '(
                 ("\\.cpp" . "templete.cpp")
+		)))
+(setq auto-insert-alist
+      (append '(
+                ("\\.c" . "templete.c")
                )))
+(setq auto-insert-alist
+      (append '(
+                ("\\.tex" . "template.tex")
+               )))
+
 (add-to-list 'display-buffer-alist
      '("^\\*shell\\*$" . (display-buffer-same-window)))
 
@@ -59,7 +68,7 @@
     ("7f57f2fe2ec03d84d9f8abe0fe510ca47d04376f59abc88cb145d6010a4ec0f3" "5273036e4cc0a97b67da7b453ec47a1c35db46525fec581069033176bcc448a9" "4c8db09e817d8b2d3bffb84d6d0c147aa0d59869ec789f7188b382eb2d5ad234" "808ae6a67ff58b7165e91fbb45d3153e1908a5602b8895e1efda0673b386aec3" "757ea2024fae394155bebdcf75ab0571d067575a8a0f1f8003715f74fe65c501" "a2fbe470ecf939eaaf63e1c2d01b233b8757ab842576497264cf432b2882d869" "9f56acd79c54865a3f877113a486d122e3fb592de1e6cb643bdb79d79278dcef" default)))
  '(package-selected-packages
    (quote
-    (guile-scheme doom-themes ample-zen-theme solarized-theme darkburn-theme tangotango-theme darktooth-theme grandshell-theme forest-blue-theme foggy-night-theme afternoon-theme ample-theme zenburn-theme yatex xclip web-mode list-packages-ext helm-themes auto-complete alect-themes))))
+    (yasnippet yasnippet-bundle guile-scheme doom-themes ample-zen-theme solarized-theme darkburn-theme tangotango-theme darktooth-theme grandshell-theme forest-blue-theme foggy-night-theme afternoon-theme ample-theme zenburn-theme yatex xclip web-mode list-packages-ext helm-themes auto-complete alect-themes))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -130,9 +139,14 @@
 
 
 (require 'doom-themes)
-
 (load-theme 'doom-theme2 t)
 (show-paren-mode t)
 (set-face-attribute 'show-paren-match nil
       :background "#696969")
+
+(require 'yasnippet)
+
+
+
+
 
