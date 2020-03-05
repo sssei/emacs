@@ -1,128 +1,128 @@
-cd System/
-ls
-cd ..
-ls
-sudo du -sh /*
-jupyter notebook
-git add .
-git commit -m"new file"
-git push origin master 
-ls
-cd
-cd Project/JavaScript/
-ls
-git add .
-git commit -m"new file"
-git push origin master 
-ls | grep html
-ls
-cat 
-cat hello_ex.js
-cat hello_ex.js | grep let
-ls
-emacs -nw 
-ls
-dest.js  hello.html  hello_ex.css  hello_ex.html  hello_ex.js  label_no.js  try.js
-cd ..
-ls
+n
+n
+n
+n
+n
+n
 python 
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+python 
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+python
+python
+n
+n
+python 
+(+ 1 2)
+(defun (f x) (+ x 1))
+(f 3)
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+n
+jupyter notebook
+cd 
+jupyter notebook
+(+ 1 2)
+(+ 1 3)
 ls
-cd ..
-ls
-ls
-git add .
-git commit -m"new file"
-git remote -v
-git push origin master 
-ls
-ls -a
-cd ..
-ping
-ping www.yahoo.co.jp
-g++ main.cpp
-g++ main.cpp
-g++ main.cpp
-g++ main.cpp
-./a.out
-git add .
-git commit -m"new file"
-git remote -v
-git push Cpp master 
-ls
-git add .
-git commit -m"new file"
-git push Cpp master 
 cd
-df
-sudo rm -rf ~/Library/Developer/Xcode/DerivedData/*
-df
-ls -lah
-cd Project
 ls
-ls -alh
-ls -s
-cd /
+(+ 1 2)
+(current-buffer)
+(+ 1 2)
+(other-window -1)
 ls
-ls -la
-ls -las
-cd Users/
 ls
-cd uenoseiga/
-ls
-ls -a
-ls -la
-rm 1qlz.pdb 4kml.pdb 
-ls
-cd ..
-cd ..
-ls
-ls -al
-sudo du -g -x -d 5 / | awk '$1 >= 5{print}'
-ls
-cd Project/Atcoder/
-git add .
-git commit -m"new file"
-git push Atcoder master 
-which sar
-which strace
 ls
 ls 
-sudo apt install sysstat
-yum -y install sysstat
-cd /
-which echo
-which ls
-pwd
-pwd
-cd JavaScript/
-git add .
-git commit -m"new file"
-git push origin master 
-cd
-cd Project/Atcoder/ABC/
 ls
-g++ 135B.cpp 
-./a
-./a.out
-./a.out
-./a.out
-g++ 135A.cpp
-./a.out
+ls
 cd ..
-git add .
-git commit -m"new file"
-git push Atcoder master 
-cd ABC/
-g++ 135C.cpp 
-./a.out
-./a.out
-./a.out
-g++ 135C.cpp 
-g++ 135C.cpp 
-./a.out
-cd ..
-git add .
-git commit -m"new file"
-git push Atcoder master 
-cd
-jupyter notebook
+1
+pwd
+ls
+(+ 1 2)
+(other-window -1)
+(other-window -1)
+@ls
+ls
+(+ 1 2)
+(+ 1 (+ 2 3))
+(other-window -1)
+(other-window -1)
+(other-window -1)
+(split-window-vertically)
+(split-window-vertically)
+(split-window-vertically)
+mkdir DeepLearnig
+ls
+ls
+ls
+cd ABC
+cd Atcoder/ABC
+g++ 007D.cpp 
+g++ 007D.cpp 
+./a.out 
+./a.out 
+./a.out 
+./a.out 

@@ -1,19 +1,35 @@
-\documentclass[a4paper]{ujarticle}
+\documentclass[a4paper]{jarticle}
 \usepackage{bm}
 \usepackage{amsmath,amssymb}
 \usepackage{geometry}
-\topmargin = 0mm
-\oddsidemargin = 5mm
-\textwidth = 152mm
-\textheight = 240mm
-\renewcommand{\thesubsection}{問\arabic{subsection}}
-\renewcommand{\thesubsubsection}{(\arabic{subsubsection})}
-\makeatletter
-  \renewcommand{\theequation}{\arabic{subsection}.\arabic{equation}}
-  \@addtoreset{equation}{subsection}
-\makeatother
+\usepackage{listings}
+\usepackage{titlesec}
+\usepackage[dvipdfmx]{graphicx}
+\lstset{
+  basicstyle={\ttfamily},
+  identifierstyle={\small},
+  commentstyle={\smallitshape},
+  keywordstyle={\small\bfseries},
+  ndkeywordstyle={\small},
+  stringstyle={\small\ttfamily},
+  frame={tb},
+  breaklines=true,
+  columns=[l]{fullflexible},
+  numbers=left,
+  xrightmargin=0zw,
+  xleftmargin=3zw,
+  numberstyle={\scriptsize},
+  stepnumber=1,
+  numbersep=1zw,
+  lineskip=-0.5ex
+}
+\renewcommand{\lstlistingname}{ソースコード}
+\titleformat*{\section}{\Large\bfseries}
+\titleformat*{\subsection}{\normalsize\bfseries}
+\title{}
+\author{J4-180134 上野清雅}
+\date{}
 \begin{document}
-\begin{center}
-\textbf{\huge{}}
-\end{center}
+\maketitle
+
 \end{document}
