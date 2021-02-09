@@ -1,8 +1,11 @@
 (tool-bar-mode -1)
+(setq scroll-conservatively 1)
 
 ;; キーバインドの追加
 (define-key global-map (kbd "C-t") 'other-window)
 (define-key global-map (kbd "C-h") 'delete-backward-char)
+(global-set-key "\M-n" (lambda () (interactive) (scroll-up 1)))
+(global-set-key "\M-p" (lambda () (interactive) (scroll-down 1)))
 
 ;; バックアップファイルの保存先の変更
 (setq backup-directory-alist '((".*" . "~/.ehist")))
@@ -25,8 +28,7 @@
                     :foreground "black")
 
 (add-to-list 'display-buffer-alist
-	     '("^\\*Buffer List\\*$" . (display-buffer-same-window)))
-(add-to-list 'display-buffer-alist
+	     '("^\\*Buffer List\\*$" . (display-buffer-same-window))
 	     '("^\\*shell\\*$" . (display-buffer-same-window)))
 
 (prog1 "prepare leaf"
