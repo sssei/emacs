@@ -1,5 +1,3 @@
-(tool-bar-mode -1)
-
 ;; キーバインドの追加
 (define-key global-map (kbd "C-t") 'other-window)
 (define-key global-map (kbd "C-h") 'delete-backward-char)
@@ -28,6 +26,9 @@
 	     '("^\\*Buffer List\\*$" . (display-buffer-same-window)))
 (add-to-list 'display-buffer-alist
 	     '("^\\*shell\\*$" . (display-buffer-same-window)))
+(add-hook 'dired-mode-hook
+      (lambda ()
+        (define-key dired-mode-map (kbd "C-t") 'other-window)))
 
 (prog1 "prepare leaf"
   (prog1 "package"
@@ -81,4 +82,21 @@
            (sml/shorten-directory . -1))
   :config
   (sml/setup))
+
+(leaf *macOSclipborad
+  :if (eq system-type 'darwin)
+  :preface
+  (defun my:copy-from-osx ()
+    "Get string via pbpaste"
+    (shell-command-to-string "pbpaste"))
+  (defun my:paste-to-osx (text &optional push)
+    "put `TEXT' via pbcopy with `PUSH' mode"
+    (let ((process-connection-type nil))
+      (let ((proc (start-process "pbcopy" "*Messages*" "pbcopy")))
+        (process-send-string proc text)
+        (process-send-eof proc))))
+  :config
+  (setq interprogram-cut-function   'my:paste-to-osx
+        interprogram-paste-function 'my:copy-from-osx))
+
 
