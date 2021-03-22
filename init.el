@@ -62,6 +62,9 @@
 
 (add-to-list 'display-buffer-alist
 	     '("^\\*shell\\*$" . (display-buffer-same-window)))
+(add-hook 'dired-mode-hook
+      (lambda ()
+        (define-key dired-mode-map (kbd "C-t") 'other-window)))
 
 (add-to-list 'display-buffer-alist
 	     '("^\\*Man\.\*\\*$" . (display-buffer-same-window)))
@@ -106,6 +109,7 @@
            (sml/shorten-directory . -1))
   :config
   (sml/setup))
+
 
 (leaf cus-edit
   :doc "tools for customizing Emacs and Lisp packages"
